@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US'">
+
+<style>
+body {background-color: black;}
+</style>
+
+<head>
+  <div class="page-header">
+  <h1 style="text-align:center; color:yellow;"> G^2 <small> <br/> Gift Giving <hr> </h1>
+  <center><img src="C:\Users\Owner\Pictures\Misc\kindness.jpg" alt="Kindness :)" style="width:500px;height=500px;"></center>
+</div>
+</head>
+
+<form id = "form" obsubmit= "return false;">
+  <input style="position:absolute; top:80%; left:5%; width:40%;" type="text" id="userInput"/>
+  <input style="position:absolute; top:50%; left:5%; width:40%;" type="submit" onClick="othername();"/>
+
+
+<br/>
+<body style="color:white; text-align:center">
+  <form action="/action_page.php">
+  First Name: <input type="text" name="FirstName" value=""> <br/>
+  Last Name: <input type="text" name="LastName" value=""> <br/>
+  Location: <input type="text" name="Location" value=""> <br/>
+  Item: <input type="text" name="Item" value=""> <br/>
+  Expiration Date: <input type="text" name="Item" value=""> <br/>
+  <br/>
+  <input type="submit" value="Submit Kindness">
+  </form>
+
+</body>
+
+</html>
