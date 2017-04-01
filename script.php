@@ -4,9 +4,9 @@ if(isset($_POST['submit'])){
 // Fetching variables of the form which travels in URL
 $object = $_POST['object'];
 $location = $_POST['location'];
-$time = $_POST['days'];
+$days = $_POST['days'];
 $requested = $_POST['request'];
-if($object !=''&& $location !=''&& $time !=''&& $requested !='')
+if($object !=''&& $location !=''&& $days !=''&& $requested !='')
 {
 //  To redirect form on a particular page
 header("Location:index.html");
@@ -19,10 +19,10 @@ else{
 
 
 $user = 'root';
-$password = 'root';
+$password = 'Berber97';
 $db = 'gSquared';
 $host = 'localhost';
-$port = 8889;
+$port = 3306;
 
 $link = mysqli_init();
 $success = mysqli_real_connect(
