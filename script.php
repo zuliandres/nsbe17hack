@@ -1,3 +1,4 @@
+
 <?php 
 
 
@@ -28,10 +29,10 @@ $success = mysqli_real_connect(
 
 //Create connection
 mysql_connect(localhost,$username,$password);
-@mysql_select_db($database) or die( "Unable to select database");
+@mysql_select_db($db) or die( "Unable to select database");
 
-$query = "INSERT INTO contacts VALUES ('','$first','$last','$phone','$mobile','$fax','$email','$web')";
-mysql_query($query);
+//$query = "INSERT INTO contacts VALUES ('','$first','$last','$phone','$mobile','$fax','$email','$web')";
+//mysql_query($query);
 
 
 
@@ -44,17 +45,21 @@ mysql_query($query);
 //}
 
 
-if $requested == true{
-	$sql = "INSERT INTO Requested (name, location, time)
-	VALUES (object, location, time);";
+if ($requested == true){
+	$sql = "INSERT INTO Requested (name, location, days)
+	VALUES (object, location, days);";
+}
+else 
+	$sql = "INSERT INTO Given(name, location, days)
+	VALUES (object, location, days);";
 
 if ($conn->multi_query($sql) === TRUE) {
     echo "New records created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-}
 
 
 $conn->close();
 ?>
+
