@@ -1,12 +1,29 @@
 
 <?php 
 
+if(isset($_POST['submit'])){
+// Fetching variables of the form which travels in URL
+$object = $_POST['object'];
+$location = $_POST['location'];
+$time = $_POST['days'];
+$requested = $_POST['request'];
+if($object !=''&& $location !=''&& $time !=''&& $requested !='')
+{
+//  To redirect form on a particular page
+header("Location:index.html");
+}
+else{
+?><span><?php echo "Please fill all fields.....!!!!!!!!!!!!";?></span> <?php
+}
+}
 
-$object = $_POST["object"];
-$location = $_POST["location"];
-$time = $_POST["time"];
 
-$requested = $_POST["true"];
+
+//$object = $_POST["object"];
+//$location = $_POST["location"];
+//$time = $_POST["days"];
+
+//$requested = $_POST["request"];
 
 
 $user = 'root';
@@ -28,8 +45,8 @@ $success = mysqli_real_connect(
 
 
 //Create connection
-mysql_connect(localhost,$username,$password);
-@mysql_select_db($db) or die( "Unable to select database");
+mysql_connect(localhost:8889,$user,$password);
+mysql_select_db($db) or die( "Unable to select database");
 
 //$query = "INSERT INTO contacts VALUES ('','$first','$last','$phone','$mobile','$fax','$email','$web')";
 //mysql_query($query);
@@ -47,11 +64,11 @@ mysql_connect(localhost,$username,$password);
 
 if ($requested == true){
 	$sql = "INSERT INTO Requested (name, location, days)
-	VALUES (object, location, days);";
+	VALUES ('',$object', '$location', '$days');";
 }
 else 
 	$sql = "INSERT INTO Given(name, location, days)
-	VALUES (object, location, days);";
+	VALUES ('','$object', '$location', '$days');";
 
 if ($conn->multi_query($sql) === TRUE) {
     echo "New records created successfully";
@@ -62,4 +79,3 @@ if ($conn->multi_query($sql) === TRUE) {
 
 $conn->close();
 ?>
-
