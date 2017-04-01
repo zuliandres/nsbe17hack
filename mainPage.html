@@ -34,10 +34,14 @@
   </head>
   <body>
   <div id="floating-panel">
-      <input id="Object" type="textbox" value="Enter your item description">
-      <input id="address" type="textbox" value="Enter your address">
-      <input id="timeLeft" type="textbox" value="Enter time of Object">
-      <input id="submit" type="button" value="GO!">
+  <form action="script.php" method="post">
+      <input id="Object" type="textbox" value="Item" name="object">
+      <input id="address" type="textbox" value="Location" name="location">
+      <input id="timeLeft" type="textbox" value="Time" name="days">
+      <input type="radio" name="request" value="true">Request
+      <input type="radio" name="request" value="false">Give
+      <input id="submit" type="button" value="Enter">
+      </form>
     </div>
     <div id="map"></div>
     <p id="demo">HELLO</p>
